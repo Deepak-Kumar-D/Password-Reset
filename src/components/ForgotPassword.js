@@ -53,7 +53,7 @@ function ForgotPassword() {
           placeholder="Email"
           {...register("email")}
         />
-        <p className="message">{errors.email && "⚠ Password is required!"}</p>
+        <p className="message">{errors.email && "⚠ Email-Id is required!"}</p>
 
         <input type="submit" value="SUBMIT" />
       </form>
