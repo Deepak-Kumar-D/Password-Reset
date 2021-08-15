@@ -23,7 +23,7 @@ function ResetPassword() {
 
   const onSubmit = async (data) => {
     const obj = await fetch(
-      `https://react-password-reset.netlify.app/resetpassword/${token}`,
+      `https://db-password-reset.herokuapp.com/resetpassword/${token}`,
       {
         method: "POST",
         headers: {

@@ -19,7 +19,7 @@ function ForgotPassword() {
 
   const onSubmit = async (data) => {
     const obj = await fetch(
-      "https://react-password-reset.netlify.app/forgotpassword",
+      "https://db-password-reset.herokuapp.com/forgotpassword",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

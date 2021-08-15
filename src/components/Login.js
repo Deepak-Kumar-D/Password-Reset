@@ -19,7 +19,7 @@ function Login() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data) => {
-    const obj = await fetch("https://react-password-reset.netlify.app/login", {
+    const obj = await fetch("https://db-password-reset.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -23,7 +23,7 @@ function Register() {
 
   const onSubmit = async (data) => {
     const obj = await fetch(
-      "https://react-password-reset.netlify.app/register",
+      "https://db-password-reset.herokuapp.com/register",
       {
         method: "POST",
         headers: {

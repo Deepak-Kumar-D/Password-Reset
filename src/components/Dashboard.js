@@ -6,7 +6,7 @@ function Dashboard() {
   const logout = async () => {
     try {
       const obj = await fetch(
-        "https://react-password-reset.netlify.app/logout",
+        "https://db-password-reset.herokuapp.com/logout",
         {
           method: "GET",
           headers: {
