@@ -37,12 +37,12 @@ function ResetPassword() {
 
     const newPassword = await obj.json();
 
-    if (newPassword) {
+    if (obj.status === 201) {
       alert(newPassword.message);
       reset();
       history.push("/");
     } else {
-      alert(newPassword.error);
+      alert("Invalid attempt. Try again!");
     }
   };
   return (

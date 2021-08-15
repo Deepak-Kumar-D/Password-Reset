@@ -38,12 +38,12 @@ function Register() {
 
     const reg = await obj.json();
 
-    if (reg) {
+    if (obj.status === 201) {
       alert(reg.message);
       reset();
       history.push("/");
     } else {
-      alert(reg.error);
+      alert("Email-Id already exists or Server error");
     }
   };
   return (

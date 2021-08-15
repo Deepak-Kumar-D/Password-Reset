@@ -30,14 +30,14 @@ function Login() {
       }),
     });
 
-    const reg = await obj.json();
+    const log = await obj.json();
 
-    if (obj.status !== 422 || reg) {
-      alert(obj.message);
+    if (obj.status === 200) {
+      alert(log.message);
       reset();
       history.push("/dashboard");
     } else {
-      alert(obj.error);
+      alert("Invalid Credentials");
     }
   };
   return (
