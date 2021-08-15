@@ -32,12 +32,12 @@ function Login() {
 
     const reg = await obj.json();
 
-    if (reg) {
-      alert(reg.message);
+    if (obj.status !== 422 || reg) {
+      alert(obj.message);
       reset();
       history.push("/dashboard");
     } else {
-      alert(reg.error);
+      alert(obj.error);
     }
   };
   return (
