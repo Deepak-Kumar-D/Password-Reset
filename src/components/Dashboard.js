@@ -5,14 +5,17 @@ function Dashboard() {
 
   const logout = async () => {
     try {
-      const obj = await fetch("http://localhost:5000/logout", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const obj = await fetch(
+        "https://react-password-reset.netlify.app/logout",
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       history.push("/", { replace: true });
 

@@ -19,7 +19,7 @@ function Login() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data) => {
-    const obj = await fetch("http://localhost:5000/login", {
+    const obj = await fetch("https://react-password-reset.netlify.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

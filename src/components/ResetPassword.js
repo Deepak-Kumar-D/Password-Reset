@@ -22,15 +22,18 @@ function ResetPassword() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data) => {
-    const obj = await fetch(`http://localhost:5000/resetpassword/${token}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        password: data.password,
-      }),
-    });
+    const obj = await fetch(
+      `https://react-password-reset.netlify.app/resetpassword/${token}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          password: data.password,
+        }),
+      }
+    );
 
     const newPassword = await obj.json();
 

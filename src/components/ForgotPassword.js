@@ -18,13 +18,16 @@ function ForgotPassword() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = async (data) => {
-    const obj = await fetch("http://localhost:5000/forgotpassword", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: data.email,
-      }),
-    });
+    const obj = await fetch(
+      "https://react-password-reset.netlify.app/forgotpassword",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: data.email,
+        }),
+      }
+    );
 
     if (obj.status !== 422) {
       alert("Please check your Email to reset the password.");
